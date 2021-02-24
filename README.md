@@ -8,3 +8,5 @@
 - Alex Feng: UX Designer
 
 ### Product Name: TheQ
+### Product Backlog: 
+https://buspark.atlassian.net/jira/software/projects/THEQ/boards/14/backlog
