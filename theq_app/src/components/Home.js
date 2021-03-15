@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-
+import './Home.css'
+import photo1 from './photo1.jpg';
 const Home = () => {
     const [initialData, setInitialData] = useState([{}])
 
@@ -9,9 +10,10 @@ const Home = () => {
         ).then(data => setInitialData(data))
     }, []);
         return (
-            <div class='view'>
-                <h1>Home</h1>
+            <div  className="view">
+                <h1> Home </h1>
                 <p>{initialData.title}</p>
+                <img src = {photo1} alt = "" />;
             </div> 
         );
 }
