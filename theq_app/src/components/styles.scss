@@ -1,0 +1,53 @@
+// This is the project stylesheet
+
+// Colors
+$black: rgba(0, 0, 0, 1);
+$dark-slate-gray: rgba(67, 67, 67, 1);
+$green: rgba(15, 169, 88, 1);
+$light-green: rgba(128, 221, 119, 1);
+$transparent-black: rgba(0, 0, 0, 0.25);
+$white: rgba(255, 255, 255, 1);
+
+// Typographies
+@mixin helvetica-bold {
+  font-family: "Helvetica";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+}
+@mixin helvetica-regular {
+  font-family: "Helvetica";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+@mixin palanquin-dark-30-semi-bold {
+  font-family: "Palanquin Dark";
+  font-size: 30px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin palanquin-dark-40-semi-bold {
+  font-family: "Palanquin Dark";
+  font-size: 40px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin palanquin-dark-50-bold {
+  font-family: "Palanquin Dark";
+  font-size: 50px;
+  font-weight: 700;
+  line-height: normal;
+}
+@mixin palanquin-dark-50-semi-bold {
+  font-family: "Palanquin Dark";
+  font-size: 50px;
+  font-weight: 600;
+  line-height: normal;
+}
+@mixin roboto-15-bold {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 700;
+  line-height: normal;
+}

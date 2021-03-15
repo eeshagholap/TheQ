@@ -1,8 +1,7 @@
-@import 'palanquin-dark-50-bold';
-@import "node_modules/bootstrap/scss/bootstrap";
+@import  "./styles.scss";
 
 .home {
-    background-color: white;
+    background-color: $white;
     padding: 25px 105px 432px 55px;
     display: flex;
     flex-direction: column;
@@ -13,8 +12,27 @@
     display: flex;
     align-items: flex-start;
   }
+  .helloUser {
+    margin-top: 1px;
+    padding: 6px 0 0;
+    display: flex;
+    align-items: flex-start;
+  }
+  .grid12-6{
+    position:relative;
+  }
+  .grid12-6 .inner_box{
+    position:absolute;
+    background:rgba(255,255,255,0.7);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:35px;
+    text-align:center;
+  }
   .theq {
     margin-right: 827px;
+    margin-left: 50%;
     @include palanquin-dark-50-bold;
     color: $dark-slate-gray;
   }
@@ -30,7 +48,7 @@
   }
   .helloAlexFEmphasis1 {
     @include palanquin-dark-40-semi-bold;
-    color: $light-green;
+    color: #80DD77;
   }
   .vsprofile {
     margin-top: 1px;
