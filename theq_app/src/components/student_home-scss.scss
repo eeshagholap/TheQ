@@ -1,0 +1,156 @@
+@import 'palanquin-dark-50-bold';
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.home {
+    background-color: white;
+    padding: 25px 105px 432px 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .flexWrapperOne {
+    margin-bottom: 144px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .theq {
+    margin-right: 827px;
+    @include palanquin-dark-50-bold;
+    color: $dark-slate-gray;
+  }
+  .theqEmphasis2 {
+    @include palanquin-dark-50-bold;
+    color: $light-green;
+  }
+  .helloAlexF {
+    margin-top: 18px;
+    margin-right: 21px;
+    @include palanquin-dark-40-semi-bold;
+    color: $dark-slate-gray;
+  }
+  .helloAlexFEmphasis1 {
+    @include palanquin-dark-40-semi-bold;
+    color: $light-green;
+  }
+  .vsprofile {
+    margin-top: 1px;
+    padding: 6px 0 0;
+    display: flex;
+    align-items: flex-start;
+  }
+  .spring2021Courses {
+    max-width: 466px;
+    @include palanquin-dark-50-semi-bold;
+    color: $dark-slate-gray;
+    margin-bottom: 82px;
+    margin-left: 81px;
+  }
+  .flexWrapperTwo {
+    padding: 0 0 0 81px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .relativeWrapperOne {
+    margin-right: 94px;
+    position: relative;
+  }
+  .group3 {
+    background-color: $white;
+    border-radius: 3px;
+    padding: 42px 31px 120px 26px;
+    box-shadow: 0 4px 4px 0 $transparent-black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  .casCs320 {
+    max-width: 156px;
+    @include palanquin-dark-30-semi-bold;
+    color: $dark-slate-gray;
+    margin-bottom: 8px;
+  }
+  .elementsOfTheTheoryOfComputation {
+    @include roboto-15-bold;
+    color: $dark-slate-gray;
+    &:not(:last-of-type) {
+      margin-bottom: 28px;
+    }
+  }
+  .officeHours {
+    max-width: 179px;
+    @include palanquin-dark-30-semi-bold;
+    color: $dark-slate-gray;
+    margin-bottom: 15px;
+  }
+  .voronovaFriday19300Pm400Pm {
+    @include roboto-15-bold;
+    color: $dark-slate-gray;
+    margin-bottom: 15px;
+  }
+  .group2 {
+    background-color: $white;
+    border-radius: 3px;
+    padding: 42px 31px 120px 26px;
+    box-shadow: 0 4px 4px 0 $transparent-black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .group1 {
+    background-color: $light-green;
+    border-radius: 3px;
+    padding: 5px 74px 4px 80px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .joinTheq {
+    max-width: 183px;
+    @include palanquin-dark-40-semi-bold;
+    color: $white;
+  }
+  .group4 {
+    background-color: $white;
+    border-radius: 3px;
+    padding: 42px 49px 120px 26px;
+    box-shadow: 0 4px 4px 0 $transparent-black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  .casCs460 {
+    max-width: 161px;
+    @include palanquin-dark-30-semi-bold;
+    color: $dark-slate-gray;
+    margin-bottom: 8px;
+  }
+  .group5 {
+    background-color: $white;
+    border-radius: 3px;
+    padding: 155px 42px 155px 48px;
+    box-shadow: 0 4px 4px 0 $transparent-black;
+    display: flex;
+    align-items: center;
+  }
+  .group7 {
+    display: flex;
+    align-items: center;
+  }
+  .clarityaddLine {
+    margin-right: 7px;
+    padding: 11px;
+    display: flex;
+    align-items: center;
+  }
+  .addCourse {
+    max-width: 160px;
+    @include palanquin-dark-30-semi-bold;
+    color: $dark-slate-gray;
+  }
