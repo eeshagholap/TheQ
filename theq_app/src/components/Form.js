@@ -21,8 +21,8 @@ class MyForm extends React.Component {
     return (
       <div>
       
-      <h1> Get on TheQ </h1>
-      <img src = {photo} alt = "" />
+      <h1 className = "formHeader"> Get on TheQ </h1>
+      <img className = "formphoto" src = {photo} alt = "" />
      
 
       <form id="queueForm" onSubmit={this.handleSubmit}>

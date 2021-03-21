@@ -111,7 +111,7 @@
 }
 
 
-img{
+.formphoto{
     position: absolute;
     width: 651px;
     height: 553px;
@@ -120,7 +120,7 @@ img{
 
 }
 
-h1{
+.formHeader{
     position: absolute;
     width: 284px;
     height: 91px;
