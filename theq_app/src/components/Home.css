@@ -1,4 +1,29 @@
-.view{
-    
+.instructorsButton{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    left: 720px;
+    top: 550px;
+    background: #5ad34e;
 
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.studentsButton{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    left: 1040px;
+    top: 550px;
+    background: #5ad34e;
+    
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: #FFFFFF;
 }
