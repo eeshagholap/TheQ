@@ -1,19 +1,10 @@
-from flask import Flask, request, url_for, redirect, render_template
+from flask import Flask, request, url_for, redirect, render_template,flash
 from flask_sqlalchemy import SQLAlchemy
 import sqlite3
 from flask import g
 
 app = Flask(__name__)
 app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///theq.db'
-
-@app.route('/api', methods=['GET', 'POST'])
-def api():
-    return{
-        'userid:': 1,
-        'title': "Test Flask app",
-        'Completed': False
-    }
-
 
 ### Creating the database
 
@@ -55,7 +46,27 @@ def new():
    return render_template('new.html')
 
 
+@app.route('/api', methods=['GET', 'POST'])
+def api():
+   if request.method == 'POST':
+      print(request.form['name'])
+      student = test(request.form['name'], request.form['question'],request.form['link'])
+      print(student)
+      db.session.add(student)
+      db.session.commit()
+      items = test.query.all()
+      for item in items:
+         print(item.name)
+         print(item.question)
+         print(item.zoom_link)
+      return redirect(url_for('show_all'))
+      
 
+   return{
+        'userid:': 1,
+        'title': "Test Flask app",
+        'Completed': False
+   }
 
 if __name__ == '__main__':
    db.create_all()
