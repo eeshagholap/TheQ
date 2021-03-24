@@ -15,6 +15,7 @@ class MyForm extends React.Component {
       body: (data),
     });
     document.getElementById("queueForm").reset();
+
   }
 
   render() {
