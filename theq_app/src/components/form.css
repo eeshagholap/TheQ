@@ -1,0 +1,139 @@
+.nameinput{
+    position: absolute;
+    width: 284px;
+    height: 58px;
+    left: 947px;
+    top: 334px;
+    
+    background: #FFFFFF;
+    border: 0.2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
+.namelabel{
+    position: absolute;
+    width: 54px;
+    height: 36px;
+    left: 772px;
+    top: 345px;
+    
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 36px;
+    
+    color: #000000;
+
+
+}
+
+
+.questionlabel{
+    position: absolute;
+    width: 82px;
+    height: 36px;
+    left: 772px;
+    top: 468px;
+
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 36px;
+
+    color: #000000;
+
+}
+
+.questioninput{ 
+    position: absolute;
+    width: 284px;
+    height: 58px;
+    left: 947px;
+    top: 455px;
+
+    background: #FFFFFF;
+    border: 0.2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
+
+
+.linkinput{ 
+
+    position: absolute;
+    width: 284px;
+    height: 58px;
+    left: 947px;
+    top: 576px;
+
+    background: #FFFFFF;
+    border: 0.2px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+
+}
+
+.linklabel{ 
+    position: absolute;
+    width: 96px;
+    height: 36px;
+    left: 772px;
+    top: 587px;
+
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 36px;
+
+    color: #000000;
+
+}
+
+
+.formButton{
+    position: absolute;
+    width: 284px;
+    height: 58px;
+    left: 947px;
+    top: 698px;
+
+    background: #80DD77;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
+
+.formphoto{
+    position: absolute;
+    width: 651px;
+    height: 553px;
+    left: 69px;
+    top: 203px;
+
+}
+
+.formHeader{
+    position: absolute;
+    width: 284px;
+    height: 91px;
+    left: 953px;
+    top: 179px;
+
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 91px;
+    
+
+
+color: #434343;
+}
