@@ -1,4 +1,4 @@
-from flask import Flask, request, url_for, redirect, render_template,flash
+from flask import Flask, request, url_for, redirect, render_template,flash,jsonify
 from flask_sqlalchemy import SQLAlchemy
 import sqlite3
 from flask import g
@@ -67,6 +67,16 @@ def api():
         'title': "Test Flask app",
         'Completed': False
    }
+
+@app.route('/queue')
+def queue():
+   students_list = test.query.all()
+   students = []
+
+   for item in students_list:
+      students.append({'name':item.name , 'question': item.question, 'zoom_link': item.zoom_link})
+
+   return jsonify({'students' : students})
 
 if __name__ == '__main__':
    db.create_all()

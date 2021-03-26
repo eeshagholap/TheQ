@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './student_home-scss.scss';
+
 import "./styles.scss";
 import logo from "./TheQ.png";
 import profile from "./vs_profile.png"

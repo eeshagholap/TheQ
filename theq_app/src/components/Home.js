@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './Home.css'
 import img1 from './images/home_image1.png';
 import img2 from './images/home_image2.png';
@@ -7,13 +7,7 @@ import getonq from "./images/GetonTheQ.png";
 import logo from "./TheQ.png";
 
 const Home = () => {
-    const [initialData, setInitialData] = useState([{}])
-
-    useEffect(() =>{
-        fetch('/api').then(
-            response => response.json()
-        ).then(data => setInitialData(data))
-    }, []);
+    
         return (
             <div>
                 <view style = {{top: 42, position: 'absolute', marginLeft: 55, width:127, height: 91}}>
