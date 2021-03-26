@@ -49,18 +49,18 @@ def new():
 @app.route('/api', methods=['GET', 'POST'])
 def api():
    if request.method == 'POST':
-      print(request.form['name'])
       student = test(request.form['name'], request.form['question'],request.form['link'])
-      print(student)
       db.session.add(student)
       db.session.commit()
       items = test.query.all()
       for item in items:
+         print(item.id)
          print(item.name)
          print(item.question)
          print(item.zoom_link)
       return redirect(url_for('show_all'))
       
+
 
    return{
         'userid:': 1,
@@ -74,9 +74,22 @@ def queue():
    students = []
 
    for item in students_list:
-      students.append({'name':item.name , 'question': item.question, 'zoom_link': item.zoom_link})
+      students.append({'name':item.name , 'question': item.question, 'zoom_link': item.zoom_link, 'id' : item.id})
 
    return jsonify({'students' : students})
+
+@app.route('/delete')
+def delete():
+   test.query.filter_by(id=1).delete()
+   db.session.commit()
+
+   return ('/queue')
+
+   
+
+
+
+
 
 if __name__ == '__main__':
    db.create_all()

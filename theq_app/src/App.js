@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import Error from './components/Error';
@@ -8,7 +8,9 @@ import student_home from './components/student_home';
 import queue from './components/queue'; 
 import './App.css'
  
+
 class App extends Component {
+
   render() {
     return (      
        <BrowserRouter>

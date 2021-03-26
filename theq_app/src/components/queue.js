@@ -77,19 +77,31 @@ const Queue = () => {
 
     console.log(students)
 
+    const handleClick = () =>  {
+        
+        fetch('/delete',{   
+    });
+        window.location.reload()
+
+    }
+
+
     return (
-        
-        
+            <div>
             <ul>
                 {students.map(
                 
-                s => (<li key = {s.id}>  {s.name} , {s.question } , {s.zoom_link} </li>))
+                s => (<li>  {s.name} , {s.question } , {s.zoom_link} , {s.id} </li>))
                 
                 }
 
                 
             </ul>
-    
+
+
+            <button className = "deleteButton" onClick = {handleClick}> Close Question </button>
+
+            </div>
   );
 }
 
