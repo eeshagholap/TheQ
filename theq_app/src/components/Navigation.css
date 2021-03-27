@@ -30,3 +30,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.Button5{
+  font-size: 24px; 
+  position: fixed;
+  top: 2%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+}
