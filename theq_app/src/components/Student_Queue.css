@@ -1,0 +1,93 @@
+.number{
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    left: 790px; 
+    top: 150px;
+    bottom: 700px;
+    right: 139px; 
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;                        
+    font-size: 60px;
+    color: #80DD77;
+}
+
+.question1{
+    position: absolute;
+    width: 780px;
+    height: 50px;
+    left: 532px; 
+    top: 292px;
+    bottom: 585px;
+    right: 998px; 
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;                        
+    font-size: 25px;
+    color: black;
+}
+
+.question2{
+    position: absolute;
+    width: 780px;
+    height: 80px;
+    left: 532px; 
+    top: 342px;
+    bottom: 585px;
+    right: 998px; 
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;                        
+    font-size: 25px;
+    color: black;
+}
+
+.question3{
+    position: absolute;
+    width: 780px;
+    height: 80px;
+    left: 532px; 
+    top: 392px;
+    bottom: 585px;
+    right: 998px; 
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;                        
+    font-size: 25px;
+    color: black;
+}
+
+.editButton{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 620px;
+    top: 550px;
+    background: #434343;
+
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.zoomButton{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 920px;
+    top: 550px;
+    background: #80DD77;
+
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+}
