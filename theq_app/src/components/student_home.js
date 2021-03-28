@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./student_home.css";
 import "./styles.scss";
 import logo from "./TheQ.png";
 import profile from "./vs_profile.png"
@@ -47,14 +47,14 @@ const Home = () => {
         <div>
           <div> 
           <view style = {{position: 'absolute', width: 156 + 'px', height: 54 + 'px', left: 162 + 'px', 
-                        top: 375 + 'px', bottom: 726 + 'px', right: 1122 + 'px', 
+                        top: 340 + 'px', bottom: 726 + 'px', right: 1122 + 'px', 
                         fontFamily: 'Palaquin Dark', fontStyle: 'normal', fontWeight: '600',
                         fontSize: 30, lineHeight: 0, color: "dark-slate-grey",  marginTop:0, borderTop: 3 + "px solid black"}}>
             <p> CAS CS320
             </p>
             </view>
             <view style = {{position: 'absolute', width: 265 + 'px', height: 18 + 'px', left: 162 + 'px', 
-                        top: 437 + 'px', bottom: 700 + 'px', right: 1013 + 'px', 
+                        top: 400 + 'px', bottom: 700 + 'px', right: 1013 + 'px', 
                         fontFamily: 'Palaquin Dark', fontStyle: 'normal', fontWeight: 'bold',
                         fontSize: 15, lineHeight: 0, color: "dark-slate-grey",  marginTop:0}}>
             <p>
@@ -62,7 +62,7 @@ const Home = () => {
             </p>
             </view>
             <view style = {{position: 'absolute', width: 179 + 'px', height: 54 + 'px', left: 162 + 'px', 
-                        top: 483 + 'px', bottom: 618 + 'px', right: 1099 + 'px', 
+                        top: 440 + 'px', bottom: 618 + 'px', right: 1099 + 'px', 
                         fontFamily: 'Palaquin Dark', fontStyle: 'normal', fontWeight: '600',
                         fontSize: 30, lineHeight: 0, color: "dark-slate-grey",  marginTop:0}}>
             <p>
@@ -70,7 +70,7 @@ const Home = () => {
             </p>
             </view>
             <view style = {{position: 'absolute', width: 280 + 'px', height: 80 + 'px', left: 162 + 'px', 
-                        top: 552 + 'px', bottom: 585 + 'px', right: 998 + 'px', 
+                        top: 500 + 'px', bottom: 585 + 'px', right: 998 + 'px', 
                         fontFamily: 'Roboto', fontStyle: 'normal', fontWeight: 'bold',
                         fontSize: 15, lineHeight: 0, color: "dark-slate-grey",  marginTop:0}}>
             <p>
@@ -78,14 +78,15 @@ const Home = () => {
             </p>
             </view>
             <view style = {{position: 'absolute', width: 280 + 'px', height: 80 + 'px', left: 162 + 'px', 
-                        top: 585 + 'px', bottom: 552 + 'px', right: 998 + 'px', 
+                        top: 530 + 'px', bottom: 552 + 'px', right: 998 + 'px', 
                         fontFamily: 'Roboto', fontStyle: 'normal', fontWeight: 'bold',
                         fontSize: 15, lineHeight: 0, color: "dark-slate-grey",  marginBottom:0 }}>
             <p>
               Voronova: Friday 19 5:00 PM - 7:00 PM
             </p>
             </view>
-            <view style = {{position: 'absolute', width: 156 + 'px', height: 54 + 'px', left: 593 + 'px', 
+            <button className = "classButton"> Join Class </button>
+            {/* <view style = {{position: 'absolute', width: 156 + 'px', height: 54 + 'px', left: 593 + 'px', 
                         top: 375 + 'px', bottom: 726 + 'px', right: 686 + 'px', 
                         fontFamily: 'Palaquin Dark', fontStyle: 'normal', fontWeight: '600',
                         fontSize: 30, lineHeight: 0, color: "dark-slate-grey",  marginTop:0, borderTop: 3 + "px solid black"}}>
@@ -123,7 +124,7 @@ const Home = () => {
             <p>
                  Ken: Saturday 20     2:00 PM - 4:00 PM
             </p>
-            </view>
+            </view> */}
           </div>
           </div>
           </div>

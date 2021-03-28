@@ -1,6 +1,9 @@
 import React from 'react'
 import './form.css'
 import photo from './formpic.jpg';
+
+
+
 class MyForm extends React.Component {
   constructor() {
     super();
@@ -15,6 +18,7 @@ class MyForm extends React.Component {
       body: (data),
     });
     document.getElementById("queueForm").reset();
+    this.props.history.push('/queue')
 
   }
 
@@ -42,6 +46,10 @@ class MyForm extends React.Component {
       </form>
 
       </div>
+      
+      
+
+
     );
   }
 }

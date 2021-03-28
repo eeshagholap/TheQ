@@ -1,9 +1,21 @@
 import React from 'react';
 import './Student_Queue.css';
 import logo from "./TheQ.png";
-import profile from "./vs_profile.png"
+import profile from "./vs_profile.png";
+import {useEffect, useState} from "react";
 
 const Student_Queue = () => {
+  const [students, setStudents] = useState([]);
+
+    useEffect(() => {
+        fetch("/queue").then(response => response.json().then(data => {
+            setStudents(data.students);
+            
+        })
+        );
+    }, []);
+
+    console.log(students)
     
     return (
       <div>

@@ -61,6 +61,7 @@
 // }
 
 import React , {useEffect, useState} from "react";
+import "./queue.css"
 
 const Queue = () => {
 
@@ -106,26 +107,22 @@ function  handleClick (param) {
 //             </div>
 //   );
     return (
-        <div className="container">
-            <h1>Simple Inventory Table</h1>
-            <table>
+        <div className="styled">
+            <table class="hoverTable">
                 <thead>
                 <tr>
                     <th>Name</th>
                     <th>Question</th>
-                    <th>zoom_link</th>
+                    <th>Zoom Link</th>
                 </tr>
                 </thead>
                 <tbody>
-                    {
-                        students.map((item) => (
+                    {students.map((item) => (
                             <tr key={item.id}>
                                 <td>{item.name}</td>
                                 <td>{item.question}</td>
-                                <td>{item.zoom_link}</td>
-                                <td>{item.id}</td>
+                                <td><a href={(item.zoom_link)}>Join Zoom Link</a></td>
                                 <td><button className = "deleteButton" onClick={() => handleClick(item.id)}> Close Question </button></td>
-                                <td/>
                             </tr>
                         ))
                     }
