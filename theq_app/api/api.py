@@ -78,12 +78,12 @@ def queue():
 
    return jsonify({'students' : students})
 
-@app.route('/delete')
-def delete():
-   test.query.filter_by(id=1).delete()
+@app.route('/delete/<input>')
+def delete(input):
+   test.query.filter_by(id=input).delete()
    db.session.commit()
 
-   return ('/queue')
+   return redirect(url_for('queue'))
 
    
 
