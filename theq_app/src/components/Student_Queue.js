@@ -6,7 +6,7 @@ import {useEffect, useState} from "react";
 
 const Student_Queue = () => {
   const [students, setStudents] = useState([]);
-
+  const [cookie,setCookie] = useState([]);
     useEffect(() => {
         fetch("/queue").then(response => response.json().then(data => {
             setStudents(data.students);
@@ -15,7 +15,26 @@ const Student_Queue = () => {
         );
     }, []);
 
-    console.log(students)
+    useEffect(() => {
+      fetch("/getcookie").then(response => response.json().then(data => {
+          setCookie(data);
+          
+      })
+      );
+  }, []);
+
+  console.log(cookie)
+  let place = 0 
+  let question = ""
+
+    for (let i=0; i< students.length; i++){
+      
+      if(students[i].name.localeCompare(cookie)) {
+        place = i+2
+        question = students[i].question
+      }
+
+    }
     
     return (
       <div>
@@ -71,9 +90,9 @@ const Student_Queue = () => {
             <p>Place in TheQ</p>
         </view>
 
-        <p className = "number">8</p>
+        <p className = "number">{place}</p>
 
-        <p className = "question1">1. What is a finite automata?</p>
+        <p className = "question1">1. {question}</p>
         <p className = "question2">2. How can I convert between DFAs and NFAs?</p>
         <p className = "question3">3. What makes a Turing machine decidable?</p>
 

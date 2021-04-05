@@ -1,7 +1,9 @@
-from flask import Flask, request, url_for, redirect, render_template,flash,jsonify
+from flask import Flask, request, url_for, redirect, render_template,flash,jsonify,make_response
 from flask_sqlalchemy import SQLAlchemy
 import sqlite3
 from flask import g
+import datetime
+from sqlalchemy import func
 
 app = Flask(__name__)
 app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///theq.db'
@@ -17,12 +19,17 @@ class test(db.Model):
     name = db.Column(db.String(1000))
     question = db.Column(db.String(10000))  
     zoom_link = db.Column(db.String(1000))
+    
     #place_in_queue = db.Column(db.Integer)
+    
+
         
     def __init__(self, name, question, zoom_link):#,place_in_queue):
         self.name = name
         self.question = question
         self.zoom_link = zoom_link
+        
+        
         #self.place_in_queue = place_in_queue
 
 
@@ -58,15 +65,14 @@ def api():
          print(item.name)
          print(item.question)
          print(item.zoom_link)
-      return redirect(url_for('show_all'))
+      res = make_response("")
+      res.set_cookie("name", request.form.get('name'))
+      return res
+      
+         
+   return redirect(url_for('show_all'))
       
 
-
-   return{
-        'userid:': 1,
-        'title': "Test Flask app",
-        'Completed': False
-   }
 
 @app.route('/queue')
 def queue():
@@ -86,6 +92,39 @@ def delete(input):
    return redirect(url_for('queue'))
 
    
+# @app.route('/studentinfo')
+# def studentinfo():
+#    x = request.cookies.get('name')
+#    query = db.session.query(
+#    test, 
+#    func.row_number()\
+#       .over(
+#          order_by = test.id,
+#          partition_by = test.id,
+#       )\
+#       .label('rank')
+#    )
+#    # now filter
+#    # now execute:
+#    # student = query.filter_by(name = x).first()
+#    # result = .all()
+#    # print(result.name)
+#    query = query.filter_by(name = "Eesha")
+#    # now execute:
+#    result = query.all()
+
+#    print(result)
+
+#    # query = query.filter_by(movie_id=movie_id)
+#    # # now execute:
+#    # my_movie = query.all()
+#    return str(result)
+
+@app.route('/getcookie')
+def getcookie():
+   x = request.cookies.get('name')
+   return jsonify(x)
+
 
 
 
