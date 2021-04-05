@@ -6,7 +6,7 @@ import {useEffect, useState} from "react";
 
 const Student_Queue = () => {
   const [students, setStudents] = useState([]);
-  const [cookie,setCookie] = useState([]);
+  const [cookie] = useState([]);
     useEffect(() => {
         fetch("/queue").then(response => response.json().then(data => {
             setStudents(data.students);
@@ -17,7 +17,6 @@ const Student_Queue = () => {
 
     useEffect(() => {
       fetch("/getcookie").then(response => response.json().then(data => {
-          setCookie(data);
           
       })
       );
@@ -26,12 +25,13 @@ const Student_Queue = () => {
   console.log(cookie)
   let place = 0 
   let question = ""
+  let name_user = ""
 
     for (let i=0; i< students.length; i++){
-      
       if(students[i].name.localeCompare(cookie)) {
-        place = i+2
+        place = i+1
         question = students[i].question
+        name_user = students[i].name
       }
 
     }
@@ -54,7 +54,7 @@ const Student_Queue = () => {
                         top: 42 + 'px', bottom: 1140 + 'px', right: 193 + 'px', 
                         fontFamily: 'Palaquin Dark', fontStyle: 'normal', fontWeight: 600,
                         fontSize: 40, lineHeight: 0, color: 'dark-slate-gray', marginTop:0}}>
-            <p>, Alex F.</p>
+            <p>, {name_user}</p>
         </view>
 
         <view style = {{position: 'absolute', width: 67, height: 70, top: 26, left: 1268, backgroundColor: '34343'}}>
