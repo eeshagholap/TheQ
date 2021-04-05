@@ -31,3 +31,6 @@ https://docs.google.com/document/d/1HYwVEwA8mGY7vc_ieHLqGPIOUfoG_w-a8VnBih7GbyU/
 
 ## Sprint Review 5:
 https://docs.google.com/document/d/1lxuGcyNEdoLMGzM9oNLJqrpTpCNI0cfqBGyR3-YgKXM/edit?usp=sharing
+
+## Sprint Review 6:
+https://docs.google.com/document/d/1TUA93vP4q-NkTeMg7ujdfpbhOO7ZaSQrSPeF9c_nSTg/edit?usp=sharing
