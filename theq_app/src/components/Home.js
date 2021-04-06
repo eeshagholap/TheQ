@@ -5,10 +5,10 @@ import img2 from './images/home_image2.png';
 import img3 from './images/home_image3.png';
 import getonq from "./images/GetonTheQ.png";
 import logo from "./TheQ.png";
+import { Link } from 'react-router-dom'
 
 const Home = () => {
-    
-        return (
+    return (
             <div>
                 <view style = {{top: 42, position: 'absolute', marginLeft: 55, width:127, height: 91}}>
                 <img src = {logo} alt = "logo"></img>
@@ -81,8 +81,12 @@ const Home = () => {
                     </view>
                 </div>
 
-                    <button className = "instructorsButton"> Instructors </button>      
-                    <button className = "studentsButton">Students</button>
+                     <Link to={'/queue'}>
+                        <button className = "instructorsButton"> Instructors </button>      
+                    </Link>
+                    <Link to={'/form-submission'}>
+                        <button className = "studentsButton">Students</button>
+                    </Link>
                     
             </div>
         );
