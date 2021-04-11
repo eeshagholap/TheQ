@@ -29,7 +29,7 @@ const Student_Queue = () => {
 
     for (let i=0; i< students.length; i++){
       if(students[i].name.localeCompare(cookie)) {
-        place = i+1
+        place = i
         question = students[i].question
         name_user = students[i].name
       }
