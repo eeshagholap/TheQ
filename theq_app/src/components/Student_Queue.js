@@ -3,10 +3,22 @@ import './Student_Queue.css';
 import logo from "./TheQ.png";
 import profile from "./vs_profile.png";
 import {useEffect, useState} from "react";
+import Popup from './popup';
+import './popup.css';
 
 const Student_Queue = () => {
   const [students, setStudents] = useState([]);
   const [cookie] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+
+  function closePopup() {
+    this.props.history.push('/student-queue')
+  }
+ 
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
+
     useEffect(() => {
         fetch("/queue").then(response => response.json().then(data => {
             setStudents(data.students);
@@ -26,12 +38,14 @@ const Student_Queue = () => {
   let place = 0 
   let question = ""
   let name_user = ""
+  let zoom_link = ""
 
     for (let i=0; i< students.length; i++){
       if(students[i].name.localeCompare(cookie)) {
-        place = i+1
+        place = i
         question = students[i].question
         name_user = students[i].name
+        zoom_link = students[i].zoom_link
       }
 
     }
@@ -92,20 +106,26 @@ const Student_Queue = () => {
 
         <p className = "number">{place}</p>
 
-        <p className = "question1">1. {question}</p>
-        <p className = "question2">2. How can I convert between DFAs and NFAs?</p>
-        <p className = "question3">3. What makes a Turing machine decidable?</p>
-
+        <p className = "question1">1.  {question}</p>
+        {/* <p className = "question2">2. How can I convert between DFAs and NFAs?</p>
+        <p className = "question3">3. What makes a Turing machine decidable?</p> */}
         <button className = "zoomButton"> Enter Zoom Button </button> 
         <button className = "editButton"> Edit Questions </button> 
-
-
-        
-
-          
-          
-         
-                    
+        <div>
+          {/* <input
+            type="button"
+            value="Click to Open Popup"
+            onClick={togglePopup}
+          /> */}
+          {place === 1 && <Popup
+            content={<>
+              <b className="popupTitle"><b>You're up next!</b></b>
+              <p className="popupBody">Time to start your meeting and wait for your Professor/TA to join.</p>
+              <button className="popupButton"><b>Enter Zoom Meeting</b></button>
+            </>}
+            handleClose={togglePopup}
+          />}
+        </div>         
       </div>
     );
 }
