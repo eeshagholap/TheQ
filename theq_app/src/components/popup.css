@@ -1,6 +1,6 @@
 .popup-box {
     position: fixed;
-    background: #80DD77;
+    background-color:rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100vh;
     top: 0;

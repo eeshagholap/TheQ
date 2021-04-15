@@ -8,6 +8,7 @@ import student_home from './components/student_home';
 import queue from './components/queue'; 
 import Student_Queue from './components/Student_Queue';
 import './App.css'
+import AdminForm from './components/admin_login';
  
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
              <Route path="/student-home" component={student_home}/>
              <Route path="/queue" component={queue}/>
              <Route path="/student-queue" component={Student_Queue}/>
+             <Route path="/admin-login" component={AdminForm}/>
              <Route component={Error}/>
            </Switch>
         </div> 
