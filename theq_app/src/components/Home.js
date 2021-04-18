@@ -26,7 +26,7 @@ const Home = () => {
                 <p>Are you an instructor or student?</p>
                 </view>
 
-                <Link to={'/queue'}>
+                <Link to={'/admin-login'}>
                     <button className = "instructorsButton"> Instructors </button>      
                 </Link>
                 
