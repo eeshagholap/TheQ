@@ -18,7 +18,7 @@ class MyForm extends React.Component {
       body: (data),
     });
     document.getElementById("queueForm").reset();
-    this.props.history.push('/student-queue')
+    this.props.history.push('/queue')
 
   }
 
