@@ -23,30 +23,18 @@ const Student_Queue = () => {
   }, []);
 
   console.log(cookie)
-
-  function  handleClick (param) {
-    console.log(param)
-    fetch(`/delete/${param}`,{  
-        
-    });
-    window.location.reload();
-    
-    
-  }
   let place = 0 
-  let id = 0 
   let question = ""
   let name_user = ""
 
-  for (let i=0; i< students.length; i++){
+    for (let i=0; i< students.length; i++){
       if(students[i].name.localeCompare(cookie)) {
         place = i
         question = students[i].question
         name_user = students[i].name
-        id = students[i].id
       }
 
-  }
+    }
     
     return (
       <div>
@@ -110,8 +98,6 @@ const Student_Queue = () => {
 
         <button className = "zoomButton"> Enter Zoom Button </button> 
         <button className = "editButton"> Edit Questions </button> 
-        <button className = "delButton" onClick={() => { if (window.confirm('Are you sure you want to leave the queue?')) handleClick(id) } }> Leave Queue </button> 
-        
 
 
         
