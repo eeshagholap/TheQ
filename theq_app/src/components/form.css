@@ -1,32 +1,33 @@
 .nameinput{
     position: absolute;
-    width: 284px;
-    height: 58px;
-    left: 947px;
-    top: 334px;
-    
+    height: 36px;
+    left: 1022px;
+    right: 125px;
+    top: 245px;
+    width: 293px;
+
+
     background: #FFFFFF;
-    border: 0.2px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
+    box-shadow: inset 0px -2px 0px #80DD77, inset 1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset -1px 0px 0px #F0F0F0;
 }
 
 .namelabel{
+    
     position: absolute;
-    width: 54px;
-    height: 36px;
-    left: 772px;
-    top: 345px;
+    width: 780px;
+    height: 61px;
+    left: 864px;
+    top: 245px;
     
     font-family: Palanquin Dark;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-size: 20px;
-    line-height: 36px;
+    line-height: 18px;
+    /* identical to box height, or 130% */
     
-    color: #000000;
-
+    
+    color: #151515;
 
 }
 
@@ -124,16 +125,31 @@
     position: absolute;
     width: 284px;
     height: 91px;
-    left: 953px;
-    top: 179px;
+    left: 1001px;
+    top: 100px;
+    right: 155px;
 
     font-family: Palanquin Dark;
     font-style: normal;
     font-weight: normal;
     font-size: 50px;
     line-height: 91px;
-    
+    /* identical to box height */
 
 
-color: #434343;
+    color: #434343;
+
 }
+
+/* .radio1{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 1030px;
+    top: 649px;
+
+    background: #FFFFFF;
+    border: 1px solid #6A6E73;
+    box-sizing: border-box;
+
+} */
