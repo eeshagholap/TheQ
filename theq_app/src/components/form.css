@@ -34,33 +34,33 @@
 
 .questionlabel{
     position: absolute;
-    width: 82px;
-    height: 36px;
-    left: 772px;
-    top: 468px;
+    height: 19px;
+    left: 864px;
+    right: 35.76%;
+    top: 465px;
 
     font-family: Palanquin Dark;
     font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 36px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 130% */
 
-    color: #000000;
+
+    color: #151515;
 
 }
 
 .questioninput{ 
     position: absolute;
-    width: 284px;
-    height: 58px;
-    left: 947px;
+    height: 36px;
+    left: 1022px;
+    right: 125px;
     top: 455px;
-
+    
     background: #FFFFFF;
-    border: 0.2px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
+    box-shadow: inset 0px -2px 0px #80DD77, inset 1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset -1px 0px 0px #F0F0F0;
+    
 }
 
 
@@ -68,33 +68,34 @@
 .linkinput{ 
 
     position: absolute;
-    width: 284px;
-    height: 58px;
-    left: 947px;
-    top: 576px;
-
+    height: 36px;
+    left: 1022px;
+    right: 125px;
+    top: 560px;
+    
     background: #FFFFFF;
-    border: 0.2px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
+    box-shadow: inset 0px -2px 0px #80DD77, inset 1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset -1px 0px 0px #F0F0F0;
+    
 
 }
 
 .linklabel{ 
     position: absolute;
-    width: 96px;
-    height: 36px;
-    left: 772px;
-    top: 587px;
-
+    height: 19px;
+    left: 864px;
+    right: 35.21%;
+    top: 570px;
+    
     font-family: Palanquin Dark;
     font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 36px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 130% */
+    
+    
+    color: #151515;
 
-    color: #000000;
 
 }
 
@@ -141,15 +142,79 @@
 
 }
 
-/* .radio1{
+.radio1label{
     position: absolute;
-    width: 16px;
-    height: 16px;
-    left: 1030px;
-    top: 649px;
+    height: 24px;
+    left: 1020px;
+    right: 280px;
+    top: 630px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+
+    color: #151515;
+
+ 
+
+}
+
+.radio2label{
+    position: absolute;
+    height: 24px;
+    left: 1020px;
+    right: 280px;
+    top: 660px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+
+    color: #151515;
+
+ 
+
+}
+
+
+
+
+.emaillabel{
+    position: absolute;
+    height: 19px;
+    left: 864px;
+    right: 37.29%;
+    top: 360px;
+
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 130% */
+
+
+    color: #151515;
+
+
+}
+
+.emailinput{
+    position: absolute;
+    height: 36px;
+    left: 1022px;
+    right: 125px;
+    top: 350px;
 
     background: #FFFFFF;
-    border: 1px solid #6A6E73;
-    box-sizing: border-box;
+    box-shadow: inset 0px -2px 0px #80DD77, inset 1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset -1px 0px 0px #F0F0F0;
 
-} */
+}

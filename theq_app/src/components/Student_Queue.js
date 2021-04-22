@@ -115,7 +115,7 @@ const Student_Queue = () => {
                         fontSize: 40, lineHeight: 0, color: "dark-slate-grey",  marginTop:0, wordWrap: "normal"}}>
             <p>Place in TheQ</p>
         </view>
-
+        
         <p className = "number">{place}</p>
 
         <p className = "question1">1.  {question}</p>
@@ -127,7 +127,29 @@ const Student_Queue = () => {
         
 
 
-        
+        <table class="hoverTablestu">
+                <thead>
+                <tr>
+                    <th>Place</th>
+                    <th>Name</th>
+                    <th>Question</th>
+                    <th>Zoom Link</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {students.map((item,index) => (
+                            
+                            <tr key={item.id}>
+                                <td>{index}</td>
+                                <td>{item.name}</td>
+                                <td>{item.question}</td>
+                                <td><a href={(item.zoom_link)}>Join Zoom Link</a></td>
+                                
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
 
           
           
@@ -139,7 +161,7 @@ const Student_Queue = () => {
             value="Click to Open Popup"
             onClick={togglePopup}
           /> */}
-          {place === 0 && <Popup
+          {place === 0  && <Popup
             content={<>
               <b className="popupTitle"><b>You're up next!</b></b>
               <p className="popupBody">Time to start your meeting and wait for your Professor/TA to join.</p>

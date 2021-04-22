@@ -1,4 +1,4 @@
-from flask import Flask, request, url_for, redirect, render_template,flash,jsonify,make_response
+from flask import Flask, request, url_for, redirect, render_template,flash,jsonify,make_response,send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 import sqlite3
 from flask import g
@@ -10,7 +10,8 @@ from sqlalchemy import func,create_engine
 
 # engine.execute('alter table test add column sessiontype String')
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder='../build', static_url_path='')
+
 app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///theq.db'
 
 ### Creating the database
@@ -41,9 +42,9 @@ class test(db.Model):
         #self.place_in_queue = place_in_queue
 
 
-@app.route('/')
-def show_all():
-   return render_template('show_all.html', test = test.query.all())
+@app.route("/", defaults={'path':''})
+def serve(path):
+    return send_from_directory(app.static_folder,'index.html')
 
 @app.route('/new', methods = ['GET', 'POST'])
 def new():

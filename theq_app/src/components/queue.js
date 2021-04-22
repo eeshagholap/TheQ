@@ -50,6 +50,7 @@ function  handleClick (param) {
             <table class="hoverTable">
                 <thead>
                 <tr>
+                    <th>Place</th>
                     <th>Name</th>
                     <th>Question</th>
                     <th>Zoom Link</th>
