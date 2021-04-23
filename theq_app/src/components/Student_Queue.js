@@ -35,20 +35,32 @@ const Student_Queue = () => {
   }, []);
 
   console.log(cookie)
+
+  function  handleClick (param) {
+    console.log(param)
+    fetch(`/delete/${param}`,{  
+        
+    });
+    window.location.reload();
+    
+    
+  }
   let place = 0 
+  let id = 0 
   let question = ""
   let name_user = ""
   let zoom_link = ""
 
-    for (let i=0; i< students.length; i++){
+  for (let i=0; i< students.length; i++){
       if(students[i].name.localeCompare(cookie)) {
         place = i
         question = students[i].question
         name_user = students[i].name
+        id = students[i].id
         zoom_link = students[i].zoom_link
       }
 
-    }
+  }
     
     return (
       <div>
@@ -103,7 +115,7 @@ const Student_Queue = () => {
                         fontSize: 40, lineHeight: 0, color: "dark-slate-grey",  marginTop:0, wordWrap: "normal"}}>
             <p>Place in TheQ</p>
         </view>
-
+        
         <p className = "number">{place}</p>
 
         <p className = "question1">1.  {question}</p>
@@ -111,13 +123,45 @@ const Student_Queue = () => {
         <p className = "question3">3. What makes a Turing machine decidable?</p> */}
         <button className = "zoomButton"> Enter Zoom Button </button> 
         <button className = "editButton"> Edit Questions </button> 
+        <button className = "delButton" onClick={() => { if (window.confirm('Are you sure you want to leave the queue?')) handleClick(id) } }> Leave Queue </button> 
+        
+
+
+        <table class="hoverTablestu">
+                <thead>
+                <tr>
+                    <th>Place</th>
+                    <th>Name</th>
+                    <th>Question</th>
+                    <th>Zoom Link</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {students.map((item,index) => (
+                            
+                            <tr key={item.id}>
+                                <td>{index}</td>
+                                <td>{item.name}</td>
+                                <td>{item.question}</td>
+                                <td><a href={(item.zoom_link)}>Join Zoom Link</a></td>
+                                
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+
+          
+          
+         
+                    
         <div>
           {/* <input
             type="button"
             value="Click to Open Popup"
             onClick={togglePopup}
           /> */}
-          {place === 1 && <Popup
+          {place === 0  && <Popup
             content={<>
               <b className="popupTitle"><b>You're up next!</b></b>
               <p className="popupBody">Time to start your meeting and wait for your Professor/TA to join.</p>

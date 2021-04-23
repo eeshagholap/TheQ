@@ -30,37 +30,7 @@
     color: black;
 }
 
-.question2{
-    position: absolute;
-    width: 780px;
-    height: 80px;
-    left: 532px; 
-    top: 342px;
-    bottom: 585px;
-    right: 998px; 
 
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;                        
-    font-size: 25px;
-    color: black;
-}
-
-.question3{
-    position: absolute;
-    width: 780px;
-    height: 80px;
-    left: 532px; 
-    top: 392px;
-    bottom: 585px;
-    right: 998px; 
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;                        
-    font-size: 25px;
-    color: black;
-}
 
 .editButton{
     position: absolute;
@@ -91,3 +61,87 @@
     font-size: 20px;
     color: #FFFFFF;
 }
+
+.delButton{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 770px;
+    top: 700px;
+    background: #80DD77;
+
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.hellohead{
+    position: absolute;
+    width: 200px;
+    height: 63px;
+    left: 1132px;
+    top: 45px;
+
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 63px;
+
+    color: #80DD77;
+}
+
+
+.logo{
+
+    position: absolute;
+    width: 113px;
+    height: 81px;
+    left: 55px;
+    top: 33px;
+
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 81px;
+
+    color: #434343;
+
+}
+
+.styled{
+    
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align:center;
+}
+
+.hoverTablestu{
+    position: absolute;
+    width: 1210px;
+    height: 1px;
+    
+    top: 1004px;
+
+	width:100%; 
+	border-collapse:collapse; 
+}
+.hoverTablestu td{ 
+	padding:7px; border:#80DD77 1px solid;
+}
+/* Define the default color for all the table rows */
+.hoverTablestu tr{
+	background: whitesmoke;
+}
+/* Define the hover highlight color for the table row */
+.hoverTablestu tr:hover {
+    background-color: #80DD77;
+}
+

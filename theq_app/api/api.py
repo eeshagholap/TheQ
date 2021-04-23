@@ -1,11 +1,17 @@
-from flask import Flask, request, url_for, redirect, render_template,flash,jsonify,make_response
+from flask import Flask, request, url_for, redirect, render_template,flash,jsonify,make_response,send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 import sqlite3
 from flask import g
 import datetime
-from sqlalchemy import func
+from sqlalchemy import func,create_engine
 
-app = Flask(__name__)
+
+# engine = create_engine('sqlite:///theq.db')
+
+# engine.execute('alter table test add column sessiontype String')
+
+app = Flask(__name__,static_folder='../build', static_url_path='')
+
 app.config ['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///theq.db'
 
 ### Creating the database
@@ -19,23 +25,26 @@ class test(db.Model):
     name = db.Column(db.String(1000))
     question = db.Column(db.String(10000))  
     zoom_link = db.Column(db.String(1000))
+    sessiontype = db.Column(db.String(1000))
+    
     
     #place_in_queue = db.Column(db.Integer)
     
 
         
-    def __init__(self, name, question, zoom_link):#,place_in_queue):
+    def __init__(self, name, question, zoom_link,sessiontype):#,place_in_queue):
         self.name = name
         self.question = question
         self.zoom_link = zoom_link
+        self.sessiontype = sessiontype
         
         
         #self.place_in_queue = place_in_queue
 
 
-@app.route('/')
-def show_all():
-   return render_template('show_all.html', test = test.query.all())
+@app.route("/", defaults={'path':''})
+def serve(path):
+    return send_from_directory(app.static_folder,'index.html')
 
 @app.route('/new', methods = ['GET', 'POST'])
 def new():
@@ -56,15 +65,14 @@ def new():
 @app.route('/api', methods=['GET', 'POST'])
 def api():
    if request.method == 'POST':
-      student = test(request.form['name'], request.form['question'],request.form['link'])
+      print(request.form)
+      student = test(request.form['name'], request.form['question'],request.form['link'],request.form['sessiontype'])
       db.session.add(student)
+      
       db.session.commit()
       items = test.query.all()
       for item in items:
-         print(item.id)
-         print(item.name)
-         print(item.question)
-         print(item.zoom_link)
+         print(item.sessiontype)
       res = make_response("")
       res.set_cookie("name", request.form.get('name'))
       return res

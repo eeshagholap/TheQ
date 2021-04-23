@@ -50,6 +50,7 @@ function  handleClick (param) {
             <table class="hoverTable">
                 <thead>
                 <tr>
+                    <th>Place</th>
                     <th>Name</th>
                     <th>Question</th>
                     <th>Zoom Link</th>
@@ -58,7 +59,7 @@ function  handleClick (param) {
                 <tbody>
                     {students.map((item,index) => (
                             <tr key={item.id}>
-                                <td>{index+1}</td>
+                                <td>{index}</td>
                                 <td>{item.name}</td>
                                 <td>{item.question}</td>
                                 <td><a href={(item.zoom_link)}>Join Zoom Link</a></td>
