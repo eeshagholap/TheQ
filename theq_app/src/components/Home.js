@@ -33,7 +33,7 @@ const Home = () => {
                 <Link to={'/form-submission'}>
                     <button className = "studentsButton">Students</button>
                 </Link>
-
+                
                 <view style = {{position: 'absolute', width:284, height: 86, marginLeft: 830, top: 220}}>
                 <img src = {getonq} alt = "getonq"></img>
                 </view>
