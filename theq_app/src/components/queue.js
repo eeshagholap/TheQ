@@ -64,6 +64,7 @@ function  handleClick (param) {
                                 <td>{item.question}</td>
                                 <td><a href={(item.zoom_link)}>Join Zoom Link</a></td>
                                 <td><button className = "deleteButton" onClick={() => handleClick(item.id)}> Close Question </button></td>
+                                <td>{item.sessiontype}</td>
                             </tr>
                         ))
                     }
