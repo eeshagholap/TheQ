@@ -14,6 +14,7 @@ const Student_Queue = () => {
   function closePopup() {
     this.props.history.push('/student-queue')
   }
+  
  
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -176,7 +177,7 @@ const Student_Queue = () => {
             value="Click to Open Popup"
             onClick={togglePopup}
           /> */}
-          {place === 0  && <Popup
+          {place === 0 && <Popup
             content={<>
               <b className="popupTitle"><b>You're up next!</b></b>
               <p className="popupBody">Time to start your meeting and wait for your Professor/TA to join.</p>

@@ -1,11 +1,35 @@
 .styled{
+    padding-top: 10%;
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
     text-align:center;
+}
+
+.logoStyle{
+    margin-top: 25px;
+    margin-left: 55px;
+    width:127;
+    height: 41;
+}
+
+.header{
+    position: absolute;
+    width: 851px;
+    height: 72px;
+    left: 294px;
+    top: 100px;
+    
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 72px;
+    
+    color: #434343;
 }
 
 .hoverTable{
@@ -13,14 +37,79 @@
 	border-collapse:collapse; 
 }
 .hoverTable td{ 
-	padding:7px; border:#80DD77 1px solid;
+    border-collapse: collapse;
+	
 }
 /* Define the default color for all the table rows */
 .hoverTable tr{
-	background: whitesmoke;
+    padding:7px; 
+    border:#80DD77 1px solid;
+    height: 93px;
+	background: none;
+    box-shadow: #434343;
 }
 /* Define the hover highlight color for the table row */
 .hoverTable tr:hover {
+    background-color:lightgray;
+}
+.close{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    font-style: bold;
+    color:red;
+    text-align:center;
+    transition: all 0.2s;
+    width: 93px;
+    height: 58px;
+    left: 1001px;
+    top: 452px;
+}
+
+.close:hover{
+    color:#000000;
+    background-color:#FFFFFF;
+}
+@media all and (max-width:30em){
+.close{
+    display:block;
+    margin:0.4em auto;
+}
+}
+
+.zoomButton1{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #80DD77;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    font-style: bold;
+    color:white;
+    text-align:center;
+    transition: all 0.2s;
+    width: 175px;
+    height: 58px;
+    top: 452px;
     background-color: #80DD77;
 }
 
+.zoomButton1:hover{
+    color:#000000;
+    background-color: gray;
+}
+@media all and (max-width:30em){
+.zoomButton1{
+    display:block;
+    margin:0.4em auto;
+}
+}
