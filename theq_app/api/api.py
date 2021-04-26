@@ -88,7 +88,7 @@ def queue():
    students = []
 
    for item in students_list:
-      students.append({'name':item.name , 'question': item.question, 'zoom_link': item.zoom_link, 'id' : item.id})
+      students.append({'name':item.name , 'question': item.question, 'zoom_link': item.zoom_link, 'id' : item.id ,'sessiontype' : item.sessiontype})
 
    return jsonify({'students' : students})
 

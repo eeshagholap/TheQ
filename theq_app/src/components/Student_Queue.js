@@ -51,19 +51,24 @@ const Student_Queue = () => {
   let question = ""
   let name_user = ""
   let zoom_link = ""
+  
 
   for (let i=0; i< students.length; i++){
       if(students[i].name.localeCompare(cookie)) {
+        console.log(cookie)
         place = i
         question = students[i].question
         name_user = students[i].name
         id = students[i].id
         zoom_link = students[i].zoom_link
+        console.log(students[i].name)
+        console.log(students[i].sessiontype)
       }
 
   }
     
     return (
+      
       <div>
 
         <view style = {{top: 42, position: 'absolute', marginLeft: 55, width:127, height: 91}}>
@@ -126,7 +131,8 @@ const Student_Queue = () => {
         <button className = "editButton"> Edit Questions </button> 
         <button className = "delButton" onClick={() => { if (window.confirm('Are you sure you want to leave the queue?')) handleClick(id) } }> Leave Queue </button> 
         
-
+        
+        
 
         <table class="hoverTablestu">
                 <thead>
@@ -138,16 +144,25 @@ const Student_Queue = () => {
                 </tr>
                 </thead>
                 <tbody>
-                    {students.map((item,index) => (
-                            
-                            <tr key={item.id}>
+                    {students.map((item,index) => {
+                      if(item.sessiontype==='Group')   
+                        return  <tr key={item.id}>
                                 <td>{index}</td>
                                 <td>{item.name}</td>
                                 <td>{item.question}</td>
                                 <td><a href={(item.zoom_link)}>Join Zoom Link</a></td>
                                 
+                                
                             </tr>
-                        ))
+                      else
+                          return <tr key={item.id}>
+                                  <td>{index}</td>
+                                  <td>{item.name}</td>
+                                  <td>{item.question}</td>
+                                  
+                                  
+                              </tr>
+})
                     }
                 </tbody>
             </table>

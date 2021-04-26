@@ -1,133 +1,11 @@
-.nameinput{
-    position: absolute;
-    height: 36px;
-    left: 1022px;
-    right: 125px;
-    top: 245px;
-    width: 293px;
-
-
-    background: #FFFFFF;
-    box-shadow: inset 0px -2px 0px #80DD77, inset 1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset -1px 0px 0px #F0F0F0;
-}
-
-.namelabel{
-    
-    position: absolute;
-    width: 780px;
-    height: 61px;
-    left: 864px;
-    top: 245px;
-    
-    font-family: Palanquin Dark;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 18px;
-    /* identical to box height, or 130% */
-    
-    
-    color: #151515;
-
-}
-
-
-.questionlabel{
-    position: absolute;
-    height: 19px;
-    left: 864px;
-    right: 35.76%;
-    top: 465px;
-
-    font-family: Palanquin Dark;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    /* identical to box height, or 130% */
-
-
-    color: #151515;
-
-}
-
-.questioninput{ 
-    position: absolute;
-    height: 36px;
-    left: 1022px;
-    right: 125px;
-    top: 455px;
-    
-    background: #FFFFFF;
-    box-shadow: inset 0px -2px 0px #80DD77, inset 1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset -1px 0px 0px #F0F0F0;
-    
-}
-
-
-
-.linkinput{ 
-
-    position: absolute;
-    height: 36px;
-    left: 1022px;
-    right: 125px;
-    top: 560px;
-    
-    background: #FFFFFF;
-    box-shadow: inset 0px -2px 0px #80DD77, inset 1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset -1px 0px 0px #F0F0F0;
-    
-
-}
-
-.linklabel{ 
-    position: absolute;
-    height: 19px;
-    left: 864px;
-    right: 35.21%;
-    top: 570px;
-    
-    font-family: Palanquin Dark;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    /* identical to box height, or 130% */
-    
-    
-    color: #151515;
-
-
-}
-
-
-.formButton{
-    position: absolute;
-    width: 284px;
-    height: 58px;
-    left: 947px;
-    top: 698px;
-
-    background: #80DD77;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
-}
-
-
-.formphoto{
-    position: absolute;
-    width: 651px;
-    height: 553px;
-    left: 69px;
-    top: 203px;
-
+.phototext{
+    top: 300px;
 }
 
 .formHeader{
-    position: absolute;
-    width: 284px;
-    height: 91px;
-    left: 1001px;
-    top: 100px;
+    position: absolute;  
+    left: 937px;
+    top: 70px;
     right: 155px;
 
     font-family: Palanquin Dark;
@@ -137,22 +15,175 @@
     line-height: 91px;
     /* identical to box height */
 
-
     color: #434343;
+}
 
+.namelabel{
+    position: absolute;
+    width: 780px;
+    height: 61px;
+    left: 854px;
+    top: 165px;
+    
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    /* identical to box height, or 130% */
+    
+    color: #151515;
+}
+
+.nameinput{
+    position: absolute;
+    height: 36px;
+    left: 970px;
+    right: 125px;
+    top: 155px;
+    width: 293px;
+
+    background: #FFFFFF;
+    box-shadow: inset 0px -2px 0px #80DD77, inset 1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset -1px 0px 0px #F0F0F0;
+}
+
+.emaillabel{
+    position: absolute;
+    height: 19px;
+    left: 854px;
+    right: 37.29%;
+    top: 260px;
+
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    /* identical to box height, or 130% */
+
+    color: #151515;
+}
+
+.emailinput{
+    position: absolute;
+    height: 36px;
+    left: 970px;
+    right: 125px;
+    top: 250px;
+    width: 293px;
+
+    background: #FFFFFF;
+    box-shadow: inset 0px -2px 0px #80DD77, inset 1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset -1px 0px 0px #F0F0F0;
+}
+
+.questionlabel{
+    position: absolute;
+    height: 19px;
+    left: 854px;
+    right: 35.76%;
+    top: 355px;
+
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    /* identical to box height, or 130% */
+
+    color: #151515;
+}
+
+.questioninput{ 
+    position: absolute;
+    height: 36px;
+    left: 970px;
+    right: 125px;
+    top: 345px;
+    width: 293px;
+    
+    background: #FFFFFF;
+    box-shadow: inset 0px -2px 0px #80DD77, inset 1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset -1px 0px 0px #F0F0F0;
+}
+
+.linklabel{ 
+    position: absolute;
+    height: 19px;
+    left: 854px;
+    right: 35.21%;
+    top: 450px;
+    
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    /* identical to box height, or 130% */
+    
+    color: #151515;
+}
+
+
+.linkinput{ 
+
+    position: absolute;
+    height: 36px;
+    left: 970px;
+    right: 125px;
+    top: 440px;
+    width: 293px;
+    
+    background: #FFFFFF;
+    box-shadow: inset 0px -2px 0px #80DD77, inset 1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset -1px 0px 0px #F0F0F0;
+}
+
+
+
+.formButton{
+    position: absolute;
+    width: 284px;
+    height: 58px;
+    left: 927px;
+    top: 580px;
+
+    background: #80DD77;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+
+    font-family: Palanquin Dark;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+
+.formphoto{
+    position: absolute;
+    width: 700px;
+    height: 679px;
+    left: 64px;
+    top: 50px;
+}
+
+.phototext{
+    position: absolute;
+    left: 500px;
+    top: 120px;
+    width:170px;
 }
 
 .radio1label{
     position: absolute;
     height: 24px;
-    left: 1020px;
+    left: 970px;
     right: 280px;
-    top: 630px;
+    top: 500px;
+    width: 400px;
 
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 24px;
     /* identical to box height, or 150% */
 
@@ -166,14 +197,15 @@
 .radio2label{
     position: absolute;
     height: 24px;
-    left: 1020px;
+    left: 970px;
     right: 280px;
-    top: 660px;
+    top: 530px;
+    width: 400px;
 
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 24px;
     /* identical to box height, or 150% */
 
@@ -187,34 +219,3 @@
 
 
 
-.emaillabel{
-    position: absolute;
-    height: 19px;
-    left: 864px;
-    right: 37.29%;
-    top: 360px;
-
-    font-family: Palanquin Dark;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    /* identical to box height, or 130% */
-
-
-    color: #151515;
-
-
-}
-
-.emailinput{
-    position: absolute;
-    height: 36px;
-    left: 1022px;
-    right: 125px;
-    top: 350px;
-
-    background: #FFFFFF;
-    box-shadow: inset 0px -2px 0px #80DD77, inset 1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset -1px 0px 0px #F0F0F0;
-
-}
