@@ -1,6 +1,7 @@
 
 import React , {useEffect, useState} from "react";
 import "./queue.css"
+import logo from "./TheQ.png";
 
 const Queue = () => {
 
@@ -26,6 +27,10 @@ function  handleClick (param) {
         
         
     }
+    function goToLink (param) {
+         window.open(param)
+        
+    }
 
 
 //     return (
@@ -46,13 +51,17 @@ function  handleClick (param) {
 //             </div>
 //   );
     return (
-        <div className="styled">
+        <div>
+            <img className="logoStyle" src = {logo} alt = "logo"></img>
+            <h1 className="header">CS 332: Elements of the Theory of Computation</h1>
+            <div className="styled">
             <table class="hoverTable">
                 <thead>
                 <tr>
-                    <th>Place</th>
-                    <th>Name</th>
+                    <th>Place in TheQ</th>
+                    <th>Student Name</th>
                     <th>Question</th>
+                    <th></th>
                     <th>Zoom Link</th>
                 </tr>
                 </thead>
@@ -62,15 +71,14 @@ function  handleClick (param) {
                                 <td>{index}</td>
                                 <td>{item.name}</td>
                                 <td>{item.question}</td>
-                                <td><a href={(item.zoom_link)}>Join Zoom Link</a></td>
-                                <td><button className = "deleteButton" onClick={() => handleClick(item.id)}> Close Question </button></td>
+                                <td><button className = "close" onClick={() => handleClick(item.id)}> Close </button></td>
+                                <td><button className ="zoomButton1" onClick={() => goToLink(item.zoom_link)}>Join Zoom Link</button></td>
                             </tr>
                         ))
                     }
                 </tbody>
             </table>
-
-
+        </div>
         </div>
 
     );
