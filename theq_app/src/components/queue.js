@@ -2,6 +2,7 @@
 import React , {useEffect, useState} from "react";
 import "./queue.css"
 import logo from "./TheQ.png";
+import { Link } from 'react-router-dom'
 
 const Queue = () => {
 
@@ -18,12 +19,22 @@ const Queue = () => {
 
     console.log(students)
 
-function  handleClick (param) {
+    const handleRemoveItem = (e) => {
+        setStudents(students.filter(item => item.id!== e));
+       };
+
+    function  handleClick (param) {
         console.log(param)
         fetch(`/delete/${param}`,{  
             
-        });
-        window.location.reload();
+        },
+        
+        handleRemoveItem(param),
+
+        console.log(students)
+        );
+        
+    
         
         
     }
@@ -71,7 +82,9 @@ function  handleClick (param) {
                                 <td>{index}</td>
                                 <td>{item.name}</td>
                                 <td>{item.question}</td>
-                                <td><button className = "close" onClick={() => handleClick(item.id)}> Close </button></td>
+                                <Link to={'/queue'}>
+                                    <td><button className = "close" onClick={() => handleClick(item.id)}> Close </button></td>     
+                                </Link>
                                 <td><button className ="zoomButton1" onClick={() => goToLink(item.zoom_link)}>Join Zoom Link</button></td>
                             </tr>
                         ))

@@ -1,8 +1,8 @@
 import React from 'react'
 import './form.css'
 import photo from './formpic.jpg';
-import getonqueue from './images/GetonTheQ.png';
-import text from './images/form_text.png';
+
+
 
 class MyForm extends React.Component {
   constructor() {
@@ -37,9 +37,9 @@ class MyForm extends React.Component {
     return (
       <div>
       
-      <img className = "formHeader" src = {getonqueue} alt = "" />
+      <h1 className = "formHeader"> Get on TheQ </h1>
       <img className = "formphoto" src = {photo} alt = "" />
-      <img className = "phototext" src = {text} alt = "" />
+     
 
       <form id="queueForm" onSubmit={this.handleSubmit}>
         <label className = "namelabel" htmlFor="name">Name</label>
@@ -64,7 +64,7 @@ class MyForm extends React.Component {
               checked={this.state.selectedOption === "Single"}
               onChange={this.onValueChange}
             />
-            1-on-1 Session
+            1 -on- 1 Session
           </label>
           </div>
         </div>
@@ -97,4 +97,24 @@ class MyForm extends React.Component {
   }
 }
 
+
+/*
+function App() {
+  return (
+    /* <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+*/
 export default MyForm;
