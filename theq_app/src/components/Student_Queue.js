@@ -46,7 +46,7 @@ const Student_Queue = () => {
     
     
   }
-  let place = 0 
+  let place = -1
   let id = 0 
   let question = ""
   let name_user = ""
