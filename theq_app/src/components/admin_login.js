@@ -33,8 +33,8 @@ class AdminForm extends React.Component {
 
       <form id="queueForm" onSubmit={this.handleSubmit}>
         <label className = "namelabel" htmlFor="name">Password</label>
-        <input className = "nameinput" name="name" type="Name" onChange={this.inputPassword} />
-
+        <input className = "nameinput" type="password" name="name" onChange={this.inputPassword} />
+        
         <button className = "formButton"> Join TheQ </button>
 
       </form>
