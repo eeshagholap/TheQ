@@ -2,8 +2,8 @@
     position: absolute;
     width: 300px;
     height: 500px;
-    left: 790px; 
-    top: 150px;
+    left: 660px; 
+    top: 260px;
     bottom: 700px;
     right: 139px; 
 
@@ -11,15 +11,15 @@
     font-style: normal;
     font-weight: bold;                        
     font-size: 60px;
-    color: #80DD77;
+    color: darkgreen;
 }
 
 .question1{
     position: absolute;
     width: 780px;
     height: 50px;
-    left: 532px; 
-    top: 292px;
+    left: 350px; 
+    top: 392px;
     bottom: 585px;
     right: 998px; 
 
@@ -31,44 +31,38 @@
 }
 
 
-
-.editButton{
-    position: absolute;
-    width: 200px;
-    height: 50px;
-    left: 620px;
-    top: 550px;
-    background: #434343;
-
-    font-family: Palanquin Dark;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    color: #FFFFFF;
-}
-
 .zoomButton{
     position: absolute;
     width: 200px;
     height: 50px;
-    left: 920px;
-    top: 550px;
+    left: 406px;
+    top: 555px;
     background: #80DD77;
-
     font-family: Palanquin Dark;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     color: #FFFFFF;
+
+}
+.back{
+    /* image 4 */
+
+    position: absolute;
+    width: 1225px;
+    height: 536px;
+    left: 107px;
+    top: 120px;
+
 }
 
 .delButton{
     position: absolute;
     width: 200px;
     height: 50px;
-    left: 770px;
-    top: 700px;
-    background: #80DD77;
+    left: 740px;
+    top: 555px;
+    background: red;
 
     font-family: Palanquin Dark;
     font-style: normal;
@@ -114,34 +108,39 @@
 
 .styled{
     
+    padding-top: 10%;
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
     text-align:center;
 }
 
-.hoverTablestu{
+.hoverTableStudent{
     position: absolute;
     width: 1210px;
     height: 1px;
-    
-    top: 1004px;
+    text-align:center;
+    top: 800px;
 
 	width:100%; 
 	border-collapse:collapse; 
 }
-.hoverTablestu td{ 
-	padding:7px; border:#80DD77 1px solid;
+.hoverTableStudent td{ 
+	border-collapse: collapse;
 }
 /* Define the default color for all the table rows */
-.hoverTablestu tr{
-	background: whitesmoke;
+.hoverTableStudent tr{
+	padding:7px; 
+    border:#80DD77 1px solid;
+    height: 93px;
+	background: none;
+    box-shadow: #434343;
 }
 /* Define the hover highlight color for the table row */
-.hoverTablestu tr:hover {
-    background-color: #80DD77;
+.hoverTableStudent tr:hover {
+    background-color:lightgray;
 }
 

@@ -4,8 +4,8 @@
 
 .formHeader{
     position: absolute;  
-    left: 937px;
-    top: 70px;
+    left: 980px;
+    top: 15px;
     right: 155px;
 
     font-family: Palanquin Dark;
@@ -142,7 +142,7 @@
     position: absolute;
     width: 284px;
     height: 58px;
-    left: 927px;
+    left: 980px;
     top: 580px;
 
     background: #80DD77;
@@ -160,7 +160,7 @@
 .formphoto{
     position: absolute;
     width: 700px;
-    height: 679px;
+    height: 600px;
     left: 64px;
     top: 50px;
 }

@@ -33,6 +33,7 @@
 }
 
 .hoverTable{
+    position: absolute;
 	width:100%; 
 	border-collapse:collapse; 
 }
