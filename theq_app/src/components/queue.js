@@ -4,18 +4,27 @@ import "./queue.css"
 import logo from "./TheQ.png";
 import { Link } from 'react-router-dom'
 
+
+
 const Queue = () => {
 
 
     const [students, setStudents] = useState([]);
 
     useEffect(() => {
-        fetch("/queue").then(response => response.json().then(data => {
-            setStudents(data.students);
-            
-        })
-        );
+        const interval = setInterval(() => {
+            console.log('This will run every second!');
+
+            fetch("/queue").then(response => response.json().then(data => {
+                setStudents(data.students);
+                
+            })
+            );
+          }, 1000);
+        
+        return () => clearInterval(interval);
     }, []);
+
 
     console.log(students)
 
@@ -42,6 +51,9 @@ const Queue = () => {
          window.open(param)
         
     }
+
+    
+    
 
 
 //     return (

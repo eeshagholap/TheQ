@@ -7,6 +7,7 @@ import profile from "./vs_profile.png";
 import {useEffect, useState} from "react";
 import Popup from './popup';
 import './popup.css';
+import { Link } from 'react-router-dom'
 
 const Student_Queue = () => {
   const [students, setStudents] = useState([]);
@@ -27,11 +28,17 @@ const Student_Queue = () => {
 }
 
     useEffect(() => {
+      const interval = setInterval(() => {
+        console.log('This will run every second!');
+
         fetch("/queue").then(response => response.json().then(data => {
             setStudents(data.students);
             
         })
         );
+      }, 1000);
+    
+    return () => clearInterval(interval);
     }, []);
 
     useEffect(() => {
@@ -48,7 +55,7 @@ const Student_Queue = () => {
     fetch(`/delete/${param}`,{  
         
     });
-    window.location.reload();
+    
     
     
   }
@@ -67,11 +74,11 @@ const Student_Queue = () => {
         name_user = students[i].name
         id = students[i].id
         zoom_link = students[i].zoom_link
-        console.log(students[i].name)
-        console.log(students[i].sessiontype)
       }
 
   }
+
+  
     
     return (
       
@@ -109,9 +116,12 @@ const Student_Queue = () => {
         <p className = "question1">{question}</p>
         {/* <p className = "question2">2. How can I convert between DFAs and NFAs?</p>
         <p className = "question3">3. What makes a Turing machine decidable?</p> */}
-        <button className = "zoomButton"> Enter Zoom Meeting </button> 
+        <button className = "zoomButton" onClick={() => goToLink(zoom_link)}> Enter Zoom Meeting </button> 
+
+        <Link to={'/form-submission'}>
         <button className = "delButton" onClick={() => { if (window.confirm('Are you sure you want to leave the queue?')) handleClick(id) } }> Leave Queue </button> 
-        
+        </Link>
+
         <table class="hoverTableStudent">
                 <thead>
                 <tr>
@@ -154,7 +164,7 @@ const Student_Queue = () => {
             content={<>
               <b className="popupTitle"><b>You're up next!</b></b>
               <p className="popupBody">Time to start your meeting and wait for your Professor/TA to join.</p>
-              <button className="popupButton"><b>Enter Zoom Meeting</b></button>
+              <button className="popupButton" onClick={() => goToLink(zoom_link)}><b>Enter Zoom Meeting</b></button>
             </>}
             handleClose={togglePopup}
           />}
